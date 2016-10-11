@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Lesson the Load</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script> -->
     <script src='app/app.js'></script>
@@ -19,14 +20,16 @@
     </header>
 
    <div class='container' ng-controller='studentListController'>
-
-           <h1>Welcome, student!</h1>
-           <button class='button' ng-click='getStudents()'>See Assignments</button>
-           <table class='students'>
-             <tr ng-repeat='student in students'>
-               <td>{{ student.name }}</td><td>{{ student.assignment }}</td>
-             </tr>
-         </table>
+       <h1>Welcome, student!</h1>
+       <button class='button' ng-click='getStudents()'>See Assignments</button>
+       <br>
+       <input type='text' ng-model='search' placeholder='filter'/>
+       <table class='students'>
+         <tr ng-repeat="student in students | filter:search | orderBy:'created_at'">
+           <td>{{ student.name }}</td>
+           <td><a href='{{ student.assignment }}'>{{ student.assignment }}</a></td>
+         </tr>
+     </table>
    </div>
 
 

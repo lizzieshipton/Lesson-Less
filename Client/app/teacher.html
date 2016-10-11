@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Lesson the Load</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src='app/app.js'></script>
   </head>
@@ -21,10 +22,11 @@
      <div>
        <h1>Welcome, teacher!</h1>
        <form id='assignments' ng-submit='addAssignment()'>
-         <input type='text' ng-model='student.name' placeholder='student name'></input>
          <h3>Assign a Piece</h3>
-         <input type='url' ng-model='student.assignment' src='http://www.guitarcats.com/images/JazzStandardCharts/AFRO%20BLUE-9.jpg'/>
-         <!-- <input type='text' ng-model='student.assignment' placeholder='assign'></input> -->
+         <input type='text' ng-model='student.name' placeholder='student name'></input>
+         <select ng-model='student.assignment'>
+           <option ng-repeat='option in data.options' value='{{ option.url }}'>{{ option.title }}</option>
+         </select>
          <input type='submit'></input>
        </form>
 
