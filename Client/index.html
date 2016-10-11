@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='lesson'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lesson the Load</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src='app/app.js'></script>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href='/'>Home</a></li>  |
+        <li><a href='/student'>Students</a></li>  |
+        <li><a href='/teacher'>Teachers</a></li>
+      </ul>
+      <p class="title">Lesson the Load</p>
+    </header>
+
+   <div class='container'>
+      <h1>I am a...</h1>
+      <a href='/student' class='button'>Student</a>
+      <a href='/teacher' class='button'>Teacher</a>
+   </div>
+
+
+    <div class='content' ng-view></div>
+
+  </body>
+</html>

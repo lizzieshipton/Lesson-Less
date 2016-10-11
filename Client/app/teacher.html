@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='lesson'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lesson the Load</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src='app/app.js'></script>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href='/'>Home</a>  |  </li>
+        <li><a href='/student'>Students</a>  |  </li>
+        <li><a href='/teacher'>Teachers</a></li>
+      </ul>
+      <p class="title">Lesson the Load</p>
+    </header>
+
+   <div class='container' ng-controller='teacherController'>
+     <div>
+       <h1>Welcome, teacher!</h1>
+       <form id='assignments' ng-submit='addAssignment()'>
+         <input type='text' ng-model='student.name' placeholder='student name'></input>
+         <h3>Assign a Piece</h3>
+         <input type='url' ng-model='student.assignment' src='http://www.guitarcats.com/images/JazzStandardCharts/AFRO%20BLUE-9.jpg'/>
+         <!-- <input type='text' ng-model='student.assignment' placeholder='assign'></input> -->
+         <input type='submit'></input>
+       </form>
+
+
+
+     </div>
+
+   </div>
+
+
+    <!-- <div class='content' ng-view></div> -->
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "lesson_the_load",
+  "version": "1.0.0",
+  "description": "An online homework planner for freelance tutors and their students",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/lizzieshipton/course.mvp"
+  },
+  "author": "Lizzie_Shipton",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.10",
+    "mongoose": "^4.6.3",
+    "node": "0.0.0",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
+  }
+}
