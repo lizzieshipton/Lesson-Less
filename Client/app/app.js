@@ -3,7 +3,7 @@ angular.module('lesson', ['ngRoute'])
 .config(function ($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: '/app/choices.html',
+    templateUrl: '/app/landing.html',
   })
     .when('/student', {
       templateUrl: '/app/student.html',

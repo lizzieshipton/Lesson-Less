@@ -17,41 +17,41 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  Lesson the Load
+  Lesson Less
 
 ## Sub-Heading ##
-  An assignment planner and practice manager for freelance teachers and their students.
+  A score manager for freelance music teachers and their students.
 
 ## Summary ##
   Before I was a kickass MakerSquare student, I was a freelance private music teacher,
   and I know full well the frustrations that can arise when trying to get your students
   to practice regularly. Every tutor and teacher knows that the key to success is consistent,
   dedicated study - and every teacher has met that disorganized ten-year-old who
-  simply cannot keep track of their papers. What if there was a simple tool that
-  could help you and your students stay on top of their assignments?
+  just can't keep track of their papers. Copying all that music gets expensive! What if
+  there was a simple tool that could help you and your students stay on top of assignments?
 
 ## Problem ##
   How often have you given your student a binder or notebook to write down weekly
   homework assignments - only to hear the following week that they immediately
-  lost it, or forgot to bring it with them? Are you tired of finding assignments
-  crumpled and forgotten in the bottom of backpacks?
+  lost it, or forgot to bring it with them? Are you tired of wasting money on copies,
+  and finding sheet music crumpled and forgotten in the bottom of backpacks?
 
 ## Solution ##
-  Lesson the Load provides an easy interface for teachers to organize and assign
+  Lesson Less provides an easy interface for teachers to organize and assign
   weekly study material, and for students to quickly access that material after they
-  leave a lesson or tutoring session. Students can check off assignments as they
-  complete them, and teachers and parents can easily track student progress.
+  leave a lesson. Teachers can assign a piece of music from their personal database,
+  and students can easily view their assignments each week.
 
 ## Quote from You ##
-  'Lesson the Load - because kids are dumb.'
+  'Lesson Less - because kids are disorganized.'
 
 ## How to Get Started ##
-  Ready to give it a go? Head over to www.lessontheload.com and click on either
-  'teacher' or 'student' to get started.
+  To get started, simply go to lessonless.herokuapp.com and click either 'teacher'
+  or 'student'.
 
 ## Customer Quote ##
   'My son's backpack used to be a mess of crumpled papers and half-complete assignments.
-  Now, he simply logs in to the app, and all his assignments are listed there.
+  At least his music is organized - he just logs in to the app, and all his scores
+  are right there!'
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
