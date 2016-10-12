@@ -1,5 +1,4 @@
 var express = require('express');
-var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var student = require('./Database/studentController.js');

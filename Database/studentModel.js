@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
-var Q = require('q');
-var request = require('request');
+
 
 var StudentSchema = new mongoose.Schema({
   name: String,
