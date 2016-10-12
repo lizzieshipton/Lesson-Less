@@ -1,39 +1,12 @@
-<!DOCTYPE html>
-<html ng-app='lesson'>
-  <head>
-    <meta charset="utf-8" />
-    <title>Lesson the Load</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.min.js"></script> -->
-    <script src='app/app.js'></script>
-  </head>
-  <body>
-    <header>
-      <ul>
-        <li><a href='/'>Home</a>  |  </li>
-        <li><a href='/student'>Students</a>  |  </li>
-        <li><a href='/teacher'>Teachers</a></li>
-      </ul>
-      <p class="title">Lesson the Load</p>
-    </header>
-
-   <div class='container' ng-controller='studentListController'>
-       <h1>Welcome, student!</h1>
-       <button class='button' ng-click='getStudents()'>See Assignments</button>
-       <br>
-       <input type='text' ng-model='search' placeholder='filter'/>
-       <table class='students'>
-         <tr ng-repeat="student in students | filter:search | orderBy:'created_at'">
-           <td>{{ student.name }}</td>
-           <td><a href='{{ student.assignment }}'>{{ student.assignment }}</a></td>
-         </tr>
-     </table>
-   </div>
-
-
-    <!-- <div class='content' ng-view></div> -->
-
-  </body>
-</html>
+<div class='container' ng-controller='studentListController'>
+  <h1>Welcome, student!</h1>
+  <button class='button' ng-click='getStudents()'>See Assignments</button>
+  <br>
+  <input class='button' type='text' ng-model='search' placeholder='filter by name'/>
+  <table class='students'>
+    <tr ng-repeat="student in students | orderBy: 'created_at' | filter:search">
+      <td>{{ student.name }}</td>
+      <td><a href='{{ student.assignment }}'>{{ student.songName }}</a></td>
+    </tr>
+  </table>
+</div>

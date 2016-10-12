@@ -9,10 +9,5 @@ var StudentSchema = new mongoose.Schema({
 });
 
 
-StudentSchema.pre('save', function(next) {
-  var title = 'booboo';
-    this.songName = title;
-    next();
-});
 
 module.exports = mongoose.model('Student', StudentSchema);

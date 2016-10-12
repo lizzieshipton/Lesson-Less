@@ -3,7 +3,12 @@
   margin:0;
   padding:0;
 }
-
+body {
+  background-image: url('/assets/music_background.jpg');
+  background-size: auto;
+  background-position: top;
+  background-repeat: no-repeat;
+}
 h1, h3{
   font-family:arial;
   margin:20px;
@@ -70,9 +75,6 @@ td {
   padding: 20px;
   font-family: 'Raleway', sans-serif;
 }
-
-inputs{
-  display:block;
-  margin:auto;
-
+select {
+  height: 52px;
 }

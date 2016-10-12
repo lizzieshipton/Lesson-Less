@@ -1,17 +1,26 @@
-angular.module('lesson', [])
+angular.module('lesson', ['ngRoute'])
+
+.config(function ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    templateUrl: '/app/choices.html',
+  })
+    .when('/student', {
+      templateUrl: '/app/student.html',
+      controller: 'studentListController'
+    })
+    .when('/teacher', {
+      templateUrl: '/app/teacher.html',
+      controller: 'teacherController'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+  })
 
 .controller('teacherController', function($scope, $http){
 
   $scope.student = {};
-
-  $scope.addAssignment = function(){
-    console.log('inside addAssignment');
-     $http({
-      method: 'POST',
-      url: '/assignments',
-      data: $scope.student
-    });
-   };
 
   $scope.data = {
     model: null,
@@ -35,21 +44,67 @@ angular.module('lesson', [])
      {
        url:'http://www.guitarcats.com/images/JazzStandardCharts/BODY%20AND%20SOUL-59.jpg',
        title:'Body and Soul'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/AUTUMN%20LEAVES-36.jpg',
+       title:'Autumn Leaves'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/A%20FOGGY%20DAY-6.jpg',
+       title:'Foggy Day'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/MY%20FUNNY%20VALENTINE-308.jpg',
+       title:'My Funny Valentine'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/MISTY-296.jpg',
+       title:'Misty'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/STELLA%20BY%20STARLIGHT-408.jpg',
+       title:'Stella by Starlight'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/ROUND%20MIDNIGHT-364.jpg',
+       title:'Round Midnight'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/NARDIS-316.jpg',
+       title:'Nardis'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/ALONE%20TOGETHER-19.jpg',
+       title:'Alone Together'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/OLEO-327.jpg',
+       title:'Oleo'
+     },
+     {
+       url:'http://www.guitarcats.com/images/JazzStandardCharts/Isfahan-150.jpg',
+       title:'Isfahan'
      }
     ]
+   };
+
+   $scope.addAssignment = function(){
+     $http({
+       method: 'POST',
+       url: '/assignments',
+       data: $scope.student
+     });
+     $scope.student = '';
    };
 })
 
 .controller('studentListController', function($scope, $http){
-
   $scope.getStudents = function(){
-    console.log('inside getStudents');
     $http({
       method: 'GET',
       url: '/studentList'
     })
     .then(function(students){
-      console.log(students);
       $scope.students = students.data;
     });
   };

@@ -4,11 +4,10 @@ var Student = require('./studentModel.js');
 module.exports = {
 
   createStudent : function(student){
-    console.log(student);
     new Student({
       name: student.name,
       assignment: student.assignment,
-      songName: student.songName
+      songName: 'View Score'
     }).save();
   },
 
