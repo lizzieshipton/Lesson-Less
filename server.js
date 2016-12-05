@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var student = require('./Database/studentController.js');
 
-var db = mongoose.connect('mongodb://localhost/lessonDB');
+var db = mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/lessonDB');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
